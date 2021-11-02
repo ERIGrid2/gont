@@ -252,22 +252,15 @@
 
 					<section>
 						<dl>
-							<dt>port</dt>
-							<dd>Represents one side of a <em>link</em> (layer 2)</dd>
-						</dl>
-					</section>
-
-					<section>
-						<dl>
 							<dt>interface</dt>
-							<dd>a <em>port</em> with assigned one or more assigned IP addresses (layer 3)</dd>
+							<dd>an endpoint with one or more assigned IP addresses</dd>
 						</dl>
 					</section>
 
 					<section>
 						<dl>
 							<dt>switch</dt>
-							<dd>A <em>node</em> containing a Linux layer 2 bridge and attached <em>ports</em></dd>
+							<dd>A <em>node</em> containing a Linux layer 2 bridge and attached <em>interfaces</em></dd>
 						</dl>
 					</section>
 
@@ -294,7 +287,7 @@
 
 					<section>
 						<h3>Relationships</h3>
-						<img src="images/architecture.svg" />
+						<img class="stretch" src="images/architecture.svg" />
 					</section>
 
 					<section>
@@ -558,17 +551,13 @@
 								</ul>
 							</li>
 							<li>root access / <code>NET_ADMIN</code> caps</li>
-							<li>some userspace tools*
-								<ul>
-									<li>iptables &amp; traceroute</li>
-								</ul>
-							</li>
+							<li>traceroute userspace tool</li>
 						</ul>
 					</section>
 					<section>
 						<h3>Roadmap</h3>
 						<ul>
-							<li>Remove requirement of external userspace tools</li>
+							<li>Use pure Go implementation of traceroute</li>
 							<li>More topology factories</li>
 							<li>Design a nice logo</li>
 							<li>A Graphviz output for topology visualization</li>
